@@ -284,7 +284,7 @@ else
 	myUSER=$myusergiven
 	myPASS1=$mypasswordgiven
 fi
-htpasswd -b -c /etc/nginx/nginxpasswd $myUSER $myPASS1 
+htpasswd -b -c /etc/nginx/nginxpasswd "$myUSER" "$myPASS1" 
 fuECHO
 
 # Let's modify the sources list
