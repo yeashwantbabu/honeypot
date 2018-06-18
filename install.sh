@@ -131,8 +131,8 @@ if ! fgrep -qs ssh /home/$myuser/.ssh/authorized_keys
 fi
 
 # check for default SSH port
-sshport=$(fgrep Port /etc/ssh/sshd_config|cut -d ' ' -f2)
-if [ $sshport != 22 ];
+sshport=$(fgrep 'Port ' /etc/ssh/sshd_config|cut -d ' ' -f2)
+if [ ! -z "$sshport" -a "$sshport" != 22 ];
     then
         fuECHO "### SSH port is not 22. Script will abort!"
         exit 1
