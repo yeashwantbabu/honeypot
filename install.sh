@@ -132,7 +132,11 @@ fi
 
 # check for default SSH port
 sshport=$(fgrep 'Port ' /etc/ssh/sshd_config|cut -d ' ' -f2)
-if [ ! -z "$sshport" -a "$sshport" != 22 ];
+if [ -z "$sshport" ];
+    then
+        fuECHO "### Adding default port for SSH as it is missing in config file"
+        echo "Port 22" >> /etc/ssh/sshd_config
+elif [ "$sshport" != 22 ];
     then
         fuECHO "### SSH port is not 22. Script will abort!"
         exit 1
