@@ -304,6 +304,8 @@ openssl req -nodes -x509 -sha512 -newkey rsa:8192 -keyout "/etc/nginx/ssl/nginx.
 
 # Installing docker-compose, wetty, ctop, elasticdump, tpot
 pip install --upgrade pip && hash -r pip
+# upgrading setuptools
+pip install --upgrade setuptools
 fuECHO "### Installing docker-compose."
 pip install docker-compose==1.16.1 
 fuECHO "### Installing elasticsearch curator."
