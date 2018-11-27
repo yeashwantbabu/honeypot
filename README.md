@@ -1,3 +1,16 @@
+# This repository is deprecated.
+# New installations will not work.
+# Please use the [T-Pot Universal Installer](https://github.com/dtag-dev-sec/tpotce#postinstall).
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 # Autoinstall T-Pot on Ubuntu 16.04.x 
 This script will install [T-Pot 17.10](http://dtag-dev-sec.github.io/mediator/feature/2017/11/07/t-pot-17.10.html) on a fresh Ubuntu 16.04.x LTS (64bit). 
 
